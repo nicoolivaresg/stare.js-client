@@ -1,0 +1,47 @@
+{
+  "name": "stare.js-client",
+  "version": "1.0.0",
+  "description": "visualization package for stare.js-server",
+  "keywords": [
+    "client",
+    "serp",
+    "visualization"
+  ],
+  "main": "./lib/index.js",
+  "files": [
+    "lib/",
+    "dist/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "jest test/stare.test.js",
+    "test:coveralls": "jest test/stare.test.js --coverage --coverageReporters=text-lcov | coveralls",
+    "build": "babel ./lib -d ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-salazar-se/stare.js-client.git"
+  },
+  "contributors": [
+    {
+      "name": "Diego Salazar S.",
+      "email": "diego.salazar.se@usach.cl"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d-salazar-se/stare.js-client/issues"
+  },
+  "homepage": "https://github.com/d-salazar-se/stare.js-client#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "d3": "^5.14.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "babel-jest": "^25.1.0",
+    "coveralls": "^3.0.9"
+  }
+}

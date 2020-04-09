@@ -1,0 +1,23 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - node
+
+os:
+  - osx
+  - linux
+
+branches:
+  only:
+  - master
+  - develop
+  - ci
+
+script:
+  - npm install jest
+  - npm run test:coveralls
+
+notifications:
+  email: false

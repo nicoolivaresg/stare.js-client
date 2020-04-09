@@ -1,0 +1,14 @@
+{
+  "name": "stare.js-demo",
+  "version": "1.0.0",
+  "description": "Simple stare.js demo",
+  "main": "index.js",
+  "author": "Diego Salazar S.",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.13.4"
+  },
+  "scripts": {
+    "start": "node index"
+  }
+}

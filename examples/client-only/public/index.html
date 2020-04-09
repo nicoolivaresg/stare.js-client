@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stare Client Demo</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+
+  <div>
+    <select id="engine">
+      <option value="bing">bing</option>
+      <option value="ecosia">ecosia</option>
+      <option value="google">google</option>
+    </select>
+
+    <input type="text" id="query" />
+
+    <select id="pageNumber">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+
+    <button type="button" id="moreBtn">More</button>
+  </div>
+
+  <div>
+    <pre id="results"></pre>
+  </div>
+
+  <script src="/stare-client.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>
