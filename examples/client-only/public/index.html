@@ -2,41 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Stare Client Demo</title>
-  <link rel="stylesheet" type="text/css" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StArE.js Visualization Demo</title>
+ 
+  <!-- Style -->
+  <style type="text/css">
+    html, body {
+      height: 100%;
+    }
+    .row .col {
+      float: left;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0 .75rem;
+      min-height: 1px;
+    }
+    .col.s6 {
+      width: 50%;
+      margin-left: auto;
+      left: auto;
+      right: auto;
+    }
+    .error {
+      border-color: red;
+    }
+    pre {
+      border-radius: 2px;
+      border: 1px solid #ccc;
+      padding: 5px;
+      background-color: #f7f7f7;
+      overflow: auto;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <div class="row" style="margin-bottom: 20px; text-align: center;">
+      <div>
+        <select id="engine">
+          <option value="google">google</option>
+          <option value="bing">bing</option>
+          <option value="ecosia">ecosia</option>
+        </select>
 
-  <div>
-    <select id="engine">
-      <option value="bing">bing</option>
-      <option value="ecosia">ecosia</option>
-      <option value="google">google</option>
-    </select>
+        <select id="pageNumber">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
 
-    <input type="text" id="query" />
+        <input type="text" id="query" placeholder="What are you looking for..." />
 
-    <select id="pageNumber">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
+        <button id="searchBtn">
+          Search
+        </button>
+      </div>
+    </div>
 
-    <button type="button" id="moreBtn">More</button>
+    <div class="row">
+      <div class="col s6">
+        <div>JSON Result</div>
+        <pre id="results"></pre>
+      </div>
+      <div class="col s6">
+        <div>
+          <span>Visualization</span>
+
+          <select id="metric">
+            <option value="ranking">ranking</option>
+            <option value="language">language</option>
+            <option value="perspicuity">perspicuity</option>
+            <option value="length">length</option>
+          </select>
+
+          <select id="visualization">
+            <option value="bar">bar</option>
+            <option value="bubble">bubble</option>
+          </select>
+
+          <button id="visualizeBtn">
+            Visualize
+          </button>
+        </div>
+
+        <div id="canvas">
+          <svg id="svg" />
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <pre id="results"></pre>
-  </div>
-
-  <script src="/stare-client.js"></script>
   <script src="/main.js"></script>
 </body>
 </html>

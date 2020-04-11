@@ -1,14 +1,20 @@
 {
   "name": "stare.js-demo",
   "version": "1.0.0",
-  "description": "Simple stare.js demo",
+  "description": "Simple StArE.js Visualization Demo",
   "main": "index.js",
   "author": "Diego Salazar S.",
   "license": "MIT",
   "dependencies": {
-    "express": "4.13.4"
+    "axios": "^0.19.2",
+    "d3": "^5.15.1",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "4.13.4",
+    "json-formatter-js": "^2.3.4",
+    "lodash": "^4.17.15"
   },
   "scripts": {
-    "start": "node index"
+    "start": "parcel public/index.html"
   }
 }
