@@ -33,6 +33,15 @@
       background-color: #f7f7f7;
       overflow: auto;
     }
+    .stare__tooltip {
+      position: absolute;
+      padding: 4px;
+      width: 300px;
+      background-color: #f9f9f9;
+      border: 1px solid;
+      border-radius: 2px;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -67,20 +76,20 @@
     </div>
 
     <div class="row">
-      <div class="col s6">
+      <!-- <div class="col s6">
         <div>JSON Result</div>
         <pre id="results"></pre>
-      </div>
+      </div> -->
       <div class="col s6">
         <div>
           <span>Visualization</span>
 
-          <select id="metric">
+          <!-- <select id="metric">
             <option value="ranking">ranking</option>
             <option value="language">language</option>
             <option value="perspicuity">perspicuity</option>
             <option value="length">length</option>
-          </select>
+          </select> -->
 
           <select id="visualization">
             <option value="bar">bar</option>
