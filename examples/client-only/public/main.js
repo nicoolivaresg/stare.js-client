@@ -58,6 +58,7 @@ const STARE_API_URL = 'http://localhost:3000';
     let chart = stare('d3', visualization.value);
 
     if (chart) {
+      document.querySelector('#svg').innerHTML = '';
       chart('#svg', currentData, {});
     }
   }
