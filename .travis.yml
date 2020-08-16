@@ -13,9 +13,9 @@ branches:
   only:
   - master
   - develop
-  - ci
 
 script:
+  - npm install d3
   - npm install jest
   - npm run test:coveralls
 
