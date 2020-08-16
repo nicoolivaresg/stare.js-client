@@ -1,22 +1,15 @@
 
 # Stare.js Demo
 
-A demo for stare.js
+A demo for stare.js-client
 
 ## How to use
 
-```
-$ cd stare-client
-$ npm install
-$ cd demo
-$ npm install
-$ npm start
-```
+Run the following commands on your bash
 
-You will require to install parcel for this example to work
-
-```sh
-npm install -g parcel-bundler
+```
+$ npm install
+$ npm run start
 ```
 
 And point your browser to `http://localhost:3000`.

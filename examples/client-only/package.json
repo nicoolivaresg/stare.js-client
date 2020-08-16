@@ -17,6 +17,9 @@
     "three": "^0.118.3"
   },
   "scripts": {
-    "start": "parcel serve watch public/index.html"
+    "start": "parcel serve -p 3000 watch public/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
