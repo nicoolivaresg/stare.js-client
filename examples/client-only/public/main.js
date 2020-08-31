@@ -65,7 +65,7 @@ const STARE_API_URL = 'http://localhost:3000';
       
       if (visualization.value === 'grid') {
         chart('#canvas', currentData, {});
-      } else if (visualization.value === 'tiles') {
+      } else if (visualization.value === 'tiles' || visualization.value === 'tiles3') {
         currentData.documents.forEach((v, i) => {
           let div = document.createElement('div');
           div.setAttribute('class', 'svg-tiles');
@@ -73,7 +73,7 @@ const STARE_API_URL = 'http://localhost:3000';
           svg.setAttribute('id', 'svg-'+i);
           div.appendChild(svg);
           canvas.appendChild(div);
-          console.log(`chart('#svg-'${i}, ${v}, {})`);
+          // console.log(`chart('#svg-'${i}, ${v}, {})`);
           chart('#svg-'+i, v, {});
         });
       } else {
