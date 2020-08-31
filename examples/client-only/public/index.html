@@ -28,47 +28,38 @@
       </div>
     </div> -->
 
-    <div class="row">
-      <!-- <div class="col s6">
-        <div>JSON Result</div>
-        <pre id="results"></pre>
-      </div> -->
-      <div class="col">
-        <div>
-          <span>Visualization</span>
+    <div>
+      <span>Visualization</span>
 
-          <!-- <select id="metric">
-            <option value="ranking">ranking</option>
-            <option value="language">language</option>
-            <option value="perspicuity">perspicuity</option>
-            <option value="length">length</option>
-          </select> -->
+      <!-- <select id="metric">
+        <option value="ranking">ranking</option>
+        <option value="language">language</option>
+        <option value="perspicuity">perspicuity</option>
+        <option value="length">length</option>
+      </select> -->
 
-          <select id="library">
-            <option value="d3">d3</option>
-            <option value="three">three</option>
-          </select>
+      <select id="library">
+        <option value="d3">d3</option>
+        <option value="three">three</option>
+      </select>
+      <select id="visualization">
+        <option value="tiles3">keywords-position-3</option>
+        <option value="tiles2">keywords-position-2</option>
+        <option value="grid">grid screenshot</option>
+        <option value="tiles">keywords-position</option>
+        <option value="network">network</option>
+        <option value="stackedBar">stacked-bar</option>
+        <option value="bubble">bubble</option>
+        <option value="bar">bar</option>
+      </select>
 
-          <select id="visualization">
-            <option value="tiles3">keywords-position-3</option>
-            <option value="tiles2">keywords-position-2</option>
-            <option value="grid">grid screenshot</option>
-            <option value="tiles">keywords-position</option>
-            <option value="network">network</option>
-            <option value="stackedBar">stacked-bar</option>
-            <option value="bubble">bubble</option>
-            <option value="bar">bar</option>
-          </select>
+      <button id="visualizeBtn">
+        Visualize
+      </button>
+    </div>
 
-          <button id="visualizeBtn">
-            Visualize
-          </button>
-        </div>
-
-        <div id="canvas">
-          <svg id="svg" />
-        </div>
-      </div>
+    <div id="canvas">
+      <svg id="svg" />
     </div>
   </div>
 
