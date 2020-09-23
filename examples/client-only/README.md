@@ -1,15 +1,23 @@
+# Simple Client Only StArE.js (Client version)
 
-# Stare.js Demo
+## Description
+This is an really simple example for StArE.js Client version with all the basic configuration ready to run.
 
-A demo for stare.js-client
+This example provide a hard-coded StArE.js Server response, so you don't need to run that instance.
 
+## Installation
+
+```bash
+npm install
+```
 ## How to use
 
-Run the following commands on your bash
-
-```
-$ npm install
-$ npm run start
+```bash
+npm run start
 ```
 
-And point your browser to `http://localhost:3000`.
+Now you can point your browser to
+
+```
+http://localhost:3000/
+```
