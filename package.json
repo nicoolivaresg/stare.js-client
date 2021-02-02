@@ -27,6 +27,10 @@
     {
       "name": "Diego Salazar S.",
       "email": "diego.salazar.se@usach.cl"
+    },
+    {
+      "name": "Nicolás Olivares G.",
+      "email": "nicolas.olivares.g@usach.cl"
     }
   ],
   "license": "MIT",
@@ -40,6 +44,7 @@
     "debug": "^4.1.1",
     "lodash": "^4.17.19",
     "three": "^0.118.3",
+    "topojson-client": "^3.1.0",
     "tween.js": "^16.6.0"
   },
   "devDependencies": {
