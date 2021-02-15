@@ -5,7 +5,7 @@ import axios from 'axios';
 import _ from 'lodash';
 import stare from '../../../';
 
-import serverResponse from './responseBaremoFractura12.json';
+import serverResponse from './responseBaremo.json';
 
 const STARE_API_URL = 'http://localhost:3000';
 
