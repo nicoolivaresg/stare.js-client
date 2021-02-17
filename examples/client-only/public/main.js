@@ -5,7 +5,7 @@ import axios from 'axios';
 import _ from 'lodash';
 import stare from '../../../';
 
-import serverResponse from './response.json';
+import serverResponse from './responseSence.json';
 
 const STARE_API_URL = 'http://localhost:3000';
 
@@ -81,6 +81,16 @@ const STARE_API_URL = 'http://localhost:3000';
         svg.setAttribute('id', 'svg');
         canvas.appendChild(svg);
         chart('#svg', currentData, {});
+        // chart('#svg', currentData, {
+        //   labelField: 'metrics.ranking',
+        //   valueField: 'metrics.keywords-position.documentLength',
+        //   groupField: 'metrics.language',
+        //   width: 500,
+        //   height: 400,
+        //   fillColor: 'steelblue',
+        //   margin: {top: 30, right: 0, bottom: 30, left: 40}
+        // });
+        
       }
     }
   }
