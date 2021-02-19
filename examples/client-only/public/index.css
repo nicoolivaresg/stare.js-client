@@ -1,6 +1,13 @@
 html, body {
   height: 100%;
 }
+#canvas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 .container {
   padding: 10px;
@@ -27,6 +34,10 @@ pre {
   padding: 5px;
   background-color: #f7f7f7;
   overflow: auto;
+}
+
+.centroid{
+  fill: red;
 }
 .stare__tooltip {
   position: absolute;
