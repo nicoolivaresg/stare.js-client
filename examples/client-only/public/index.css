@@ -7,6 +7,10 @@ html, body {
   align-items: center;
 }
 
+area {
+  display: flex;
+  border-color: hotpink;
+}
 
 
 .container {

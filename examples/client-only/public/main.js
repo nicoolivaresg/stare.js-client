@@ -63,7 +63,7 @@ const STARE_API_URL = 'http://localhost:3000';
     if (chart) {
       document.querySelector('#canvas').innerHTML = '';
       
-      if (visualization.value === 'grid') {
+      if (visualization.value === 'grid' || visualization.value === 'bodyInjuriesMap') {
         chart('#canvas', currentData, {});
       } else if (visualization.value === 'tiles' || visualization.value === 'tiles3') {
         currentData.documents.forEach((v, i) => {
