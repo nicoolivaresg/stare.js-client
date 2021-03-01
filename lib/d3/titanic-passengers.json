@@ -1,98 +1,116 @@
 [
   {
-    "class": "1st",
-    "sex": "male",
-    "survived": "no",
+    "Nivel": "Nivel 1",
+    "Modalidad": "Presencial",
+    "Area": "Administración",
     "count": 118
   },
   {
-    "class": "1st",
-    "sex": "male",
-    "survived": "yes",
+    "Nivel": "Nivel 1",
+    "Modalidad": "Presencial",
+    "Area": "Administración",
     "count": 62
   },
   {
-    "class": "1st",
-    "sex": "female",
-    "survived": "no",
+    "Nivel": "Nivel 1",
+    "Modalidad": "Online",
+    "Area": "Educación",
     "count": 4
   },
   {
-    "class": "1st",
-    "sex": "female",
-    "survived": "yes",
+    "Nivel": "Nivel 1",
+    "Modalidad": "Online",
+    "Area": "Energía",
     "count": 141
   },
   {
-    "class": "2nd",
-    "sex": "male",
-    "survived": "no",
+    "Nivel": "Nivel 2",
+    "Modalidad": "Presencial",
+    "Area": "Forestal",
     "count": 154
   },
   {
-    "class": "2nd",
-    "sex": "male",
-    "survived": "yes",
+    "Nivel": "Nivel 2",
+    "Modalidad": "Presencial",
+    "Area": "yes",
     "count": 25
   },
   {
-    "class": "2nd",
-    "sex": "female",
-    "survived": "no",
+    "Nivel": "Nivel 2",
+    "Modalidad": "Online",
+    "Area": "no",
     "count": 13
   },
   {
-    "class": "2nd",
-    "sex": "female",
-    "survived": "yes",
+    "Nivel": "Nivel 2",
+    "Modalidad": "Online",
+    "Area": "yes",
     "count": 93
   },
   {
-    "class": "3rd",
-    "sex": "male",
-    "survived": "no",
-    "count": 422
+    "Nivel": "Nivel 3",
+    "Modalidad": "Presencial",
+    "Area": "no",
+    "count": 50
   },
   {
-    "class": "3rd",
-    "sex": "male",
-    "survived": "yes",
+    "Nivel": "Nivel 3",
+    "Modalidad": "Presencial",
+    "Area": "yes",
     "count": 88
   },
   {
-    "class": "3rd",
-    "sex": "female",
-    "survived": "no",
+    "Nivel": "Nivel 3",
+    "Modalidad": "Online",
+    "Area": "no",
     "count": 106
   },
   {
-    "class": "3rd",
-    "sex": "female",
-    "survived": "yes",
+    "Nivel": "Nivel 3",
+    "Modalidad": "Online",
+    "Area": "yes",
     "count": 90
   },
   {
-    "class": "crew",
-    "sex": "male",
-    "survived": "no",
-    "count": 670
+    "Nivel": "Nivel 4",
+    "Modalidad": "Presencial",
+    "Area": "no",
+    "count": 422
   },
   {
-    "class": "crew",
-    "sex": "male",
-    "survived": "yes",
+    "Nivel": "Nivel 4",
+    "Modalidad": "Presencial",
+    "Area": "yes",
     "count": 192
   },
   {
-    "class": "crew",
-    "sex": "female",
-    "survived": "no",
+    "Nivel": "Nivel 4",
+    "Modalidad": "Online",
+    "Area": "no",
     "count": 3
   },
   {
-    "class": "crew",
-    "sex": "female",
-    "survived": "yes",
+    "Nivel": "Nivel 4",
+    "Modalidad": "Online",
+    "Area": "yes",
     "count": 20
+  },
+  {
+    "Nivel": "Nivel 5",
+    "Modalidad": "Online",
+    "Area": "Administración",
+    "count": 20
+  },
+  {
+    "Nivel": "Nivel 5",
+    "Modalidad": "Online",
+    "Area": "Energía",
+    "count": 20
+  },
+  {
+    "Nivel": "Nivel 5",
+    "Modalidad": "Presencial",
+    "Area": "Energía",
+    "count": 200
   }
 ]
