@@ -1,9 +1,29 @@
 html, body {
   height: 100%;
 }
+div{
+  position: relative;
+}
+#canvas{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+area {
+  display: flex;
+  border-color: hotpink;
+}
+
 
 .container {
   padding: 10px;
+  position: relative;
+}
+
+.selector-container{
+  position: relative;
 }
 .row .col {
   float: left;
@@ -28,16 +48,34 @@ pre {
   background-color: #f7f7f7;
   overflow: auto;
 }
+
+.centroid{
+  fill: red;
+  width: 100px;
+  border-radius: 1%;
+}
 .stare__tooltip {
   position: absolute;
   padding: 4px;
-  width: 300px;
+  width: 100%;
   background-color: #f9f9f9;
   border: 1px solid;
   border-radius: 2px;
   pointer-events: none;
 }
-// network node
+.stare__modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  width: 500px;
+  background-color: grey;
+  border: 2px solid;
+  border-radius: 2px;
+  pointer-events: none;
+}
+/* // network node */
 .mainNode {
   z-index: -1;
 }

@@ -5,7 +5,8 @@ import axios from 'axios';
 import _ from 'lodash';
 import stare from '../../../';
 
-import serverResponse from './responseSence.json';
+// import serverResponse from './responseSence.json';
+import serverResponse from './responseBaremo.json';
 
 const STARE_API_URL = 'http://localhost:3000';
 
@@ -63,7 +64,7 @@ const STARE_API_URL = 'http://localhost:3000';
     if (chart) {
       document.querySelector('#canvas').innerHTML = '';
       
-      if (visualization.value === 'grid') {
+      if (visualization.value === 'grid' || visualization.value === 'bodyInjuriesMap') {
         chart('#canvas', currentData, {});
       } else if (visualization.value === 'tiles' || visualization.value === 'tiles3') {
         currentData.documents.forEach((v, i) => {
