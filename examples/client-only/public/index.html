@@ -8,30 +8,95 @@
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./three.grid.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 
 <body>
   <div class="container">
-    <div class="row" style="margin-bottom: 20px; text-align: center;">
-      <div>
-        <!-- <select id="engine">
+    <div class="row d-md-flex justify-content-md-center align-items-md-center"  style="flex-wrap: wrap;">
+      <img src="logo.png" alt="" style="min-width: 5%; width: 10%; height: auto;">
+      <input 
+        id="query" 
+        type="search" 
+        placeholder="What are you looking for..." 
+        class="form-control d-md-flex form-control" 
+        style="min-width: 60%; width: 60%; margin: 5px;" 
+      >
+      <select name="" id="engine" style="min-width: 10%; width: 10%;" class="form-select">
+        <option value="baremo" selected>baremo</option>
+        <option value="sence">sence</option>
+      </select>      
+      <button 
+        id="searchBtn" 
+        class="btn btn-primary" 
+        type="button" 
+        style="margin: 5px; text-align: center; min-width: 10%; width: 10%;"
+      >
+        Buscar
+      </button>
+    </div>
+    <div class="row" style="margin: 20px; text-align: center;">
+      <!-- <div>
+        <select id="engine">
           <option value="baremo">baremo</option>
           <option value="sence">sence</option>
-        </select> -->
+        </select>
 
-        <!-- <input type="text" id="numberOfResults" value="10"> -->
+        <input type="text" id="numberOfResults" value="10">Número de resultados</div>
 
-        <!-- <input type="text" id="query" placeholder="What are you looking for..." /> -->
+        <input type="text" id="query" placeholder="What are you looking for..." />
 
-        <!-- <button id="searchBtn">
+        <button id="searchBtn">
           Search
-        </button> -->
+        </button>
+      </div> -->
+      
+      <div class="col d-md-flex justify-content-md-center align-items-md-center">
+        <div class="container-fluid d-md-flex justify-content-md-center align-items-md-center"  style="flex-wrap: nowrap;">
+          <select id="visualization" class="form-select">
+            <option value="bodyInjuriesMap">Mapa corporal</option>
+            <option value="map">Mapa jurisdiccional</option>
+            <option value="elementsBubble">Burbuja de elementos necesarios</option>
+            <option value="mosaic">N. Cualificación vs Modalidad</option>
+            <!-- <option value="tiles3">keywords-position-3</option>
+              <option value="tiles2">keywords-position-2</option>
+              <option value="grid">grid screenshot</option>
+              <option value="tiles">keywords-position</option>
+              <option value="network">network</option>
+              <option value="stackedBar">stacked-bar</option>
+              <option value="bubble">bubble</option>
+              <option value="bar">bar</option> -->
+            </select>
+            <button 
+            id="visualizeBtn" 
+            class="btn btn-primary"
+            style="margin: 5px; text-align: center; width: 10%;"
+            >Visualizar</button>
+          </div>
+        </div>
       </div>
+      
+      <div class="row">
+        <div class="col" style="border: 5px;">
+          <div class="row">
+            <p id="resultsCount" class="h3">Resultados</p>
+          </div>
+          <div id="results"></div>
+          <div id="pageNumber"></div>
+        </div>
+        <div class="col" style="border: 5px;">
+          <div class="row">
+            <p class="h3">Visualización</p>
+          </div>
+          <div id="canvas">
+            <svg id="svg" />
+          </div>
+          <div id="pie-plot-default"></div>
+          <div id="mosaic-plot-default"></div>
+        </div>
     </div>
-
     <div class="selector-container">
-      <span>Visualization</span>
-
       <!-- <select id="metric">
         <option value="ranking">ranking</option>
         <option value="language">language</option>
@@ -39,43 +104,26 @@
         <option value="length">length</option>
       </select> -->
 
-      <select id="library">
+      <select id="library" hidden>
         <option value="d3">d3</option>
-        <option value="three">three</option>
+        <!-- <option value="three">three</option> -->
       </select>
-      <select id="visualization">
-        <option value="elementsBubble">elements-bubble</option>
-        <option value="bodyInjuriesMap">body-injuries-map</option>
-        <option value="map">map</option>
-        <option value="mosaic">mosaic-plot</option>
-        <option value="tiles3">keywords-position-3</option>
-        <option value="tiles2">keywords-position-2</option>
-        <option value="grid">grid screenshot</option>
-        <option value="tiles">keywords-position</option>
-        <option value="network">network</option>
-        <option value="stackedBar">stacked-bar</option>
-        <option value="bubble">bubble</option>
-        <option value="bar">bar</option>
-      </select>
-
-      <button id="visualizeBtn">
-        Visualize
-      </button>
     </div>
 
-    <div id="canvas">
+    <!-- <div id="canvas">
       <svg id="svg" />
     </div>
     <div id="pie-plot-default"></div>
-    <div id="mosaic-plot-default"></div>
+    <div id="mosaic-plot-default"></div> -->
+    
   </div>
 
-  <script src="/main.js"></script>
-  <script>
+    <script src="/main.js"></script>
+  <!-- <script>
     window.onload = function () {
       document.querySelector('#visualizeBtn').click();
     }
-  </script>
+  </script> -->
 </body>
 
 </html>

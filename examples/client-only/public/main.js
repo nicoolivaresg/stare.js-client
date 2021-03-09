@@ -5,17 +5,18 @@ import axios from 'axios';
 import _ from 'lodash';
 import stare from '../../../';
 
-import serverResponse from './responseSence.json';
-// import serverResponse from './responseBaremo.json';
+// import serverResponse from './responseSence.json';
+import serverResponse from './responseBaremo.json';
 
 const STARE_API_URL = 'http://localhost:3000';
 
 (function() {
-  // const engine = document.querySelector('#engine');
-  // const query = document.querySelector('#query');
-  // const pageNumber = document.querySelector('#pageNumber');
-  // const searchBtn = document.querySelector('#searchBtn');
-  // const results = document.querySelector('#results');
+  const engine = document.querySelector('#engine');
+  const query = document.querySelector('#query');
+  const pageNumber = document.querySelector('#pageNumber');
+  const searchBtn = document.querySelector('#searchBtn');
+  const results = document.querySelector('#results');
+  const resultsCount = document.querySelector('#resultsCount');
 
   // const metric = document.querySelector('#metric');
   const library = document.querySelector('#library');
@@ -23,7 +24,8 @@ const STARE_API_URL = 'http://localhost:3000';
   const visualizeBtn = document.querySelector('#visualizeBtn');
   const canvas = document.querySelector('#canvas');
 
-  let currentData = serverResponse;
+  // let currentData = serverResponse;
+  let currentData = null;
 
   const getResults = (engine, query, pageNumber) => {
     return new Promise((resolve, reject) => {
@@ -49,8 +51,13 @@ const STARE_API_URL = 'http://localhost:3000';
         currentData = data;
         let formatter = new JSONFormatter(data);
         results.appendChild(formatter.render());
+        resultsCount.innerHTML = 'Resultados ' + currentData.numberOfItems;
+        visualize();
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        results.innerHTML = err;
+        alert("Unable to retrieve results")
+      });
   };
 
   const visualize = () => {
@@ -59,7 +66,19 @@ const STARE_API_URL = 'http://localhost:3000';
       return;
     }
 
-    let chart = stare(library.value, visualization.value);
+    let chart = undefined;
+    console.log(engine.value);
+    console.log(visualization.value);
+    if(_.isEqual(engine.value,'baremo')){
+      if(_.isEqual(visualization.value,'map') || _.isEqual(visualization.value,'bodyInjuriesMap')){
+        chart = stare(library.value, visualization.value);
+      }
+    }
+    if(_.isEqual(engine.value,'sence')){
+      if(_.isEqual(visualization.value,'elementsBubble') || _.isEqual(visualization.value,'mosaic')){
+        chart = stare(library.value, visualization.value);
+      }
+    }
 
     if (chart) {
       document.querySelector('#canvas').innerHTML = '';
@@ -93,9 +112,11 @@ const STARE_API_URL = 'http://localhost:3000';
         // });
         
       }
+    }else{
+      alert("Unable to draw visualization");
     }
   }
 
-  // searchBtn.onclick = showResults;
+  searchBtn.onclick = showResults;
   visualizeBtn.onclick = visualize;
 })();
