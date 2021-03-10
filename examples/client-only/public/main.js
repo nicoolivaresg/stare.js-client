@@ -36,6 +36,7 @@ const STARE_API_URL = 'http://localhost:3000';
   };
 
   const showResults = () => {
+    canvas.innerHTML = '';
     query.classList = '';
 
     if (query.value === '') {
@@ -67,8 +68,6 @@ const STARE_API_URL = 'http://localhost:3000';
     }
 
     let chart = undefined;
-    console.log(engine.value);
-    console.log(visualization.value);
     if(_.isEqual(engine.value,'baremo')){
       if(_.isEqual(visualization.value,'map') || _.isEqual(visualization.value,'bodyInjuriesMap')){
         chart = stare(library.value, visualization.value);
