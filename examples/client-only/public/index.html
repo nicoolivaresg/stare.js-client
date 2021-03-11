@@ -23,6 +23,13 @@
         class="form-control d-md-flex form-control" 
         style="min-width: 60%; width: 60%; margin: 5px;" 
       >
+      <input 
+        hidden
+        type="text" 
+        id="pageNumber" 
+        value="50"
+        readonly
+      >     
       <select name="" id="engine" style="min-width: 10%; width: 10%;" class="form-select">
         <option value="baremo" selected>baremo</option>
         <option value="sence">sence</option>
@@ -43,7 +50,7 @@
           <option value="sence">sence</option>
         </select>
 
-        <input type="text" id="numberOfResults" value="10">Número de resultados</div>
+        <input type="text" id="pageNumber" value="10">Número de resultados</div>
 
         <input type="text" id="query" placeholder="What are you looking for..." />
 
@@ -89,10 +96,12 @@
           <div class="row">
             <p class="h3">Visualización</p>
           </div>
-          <div id="canvas">
-            <svg id="svg" />
-            <div id="pie-plot-default"></div>
-            <div id="mosaic-plot-default"></div>
+          <div class="row">
+            <div id="canvas">
+              <svg id="svg" />
+              <!-- <div id="pie-plot-default"></div> -->
+              <div id="mosaic-plot-default"></div>
+            </div>
           </div>
         </div>
     </div>

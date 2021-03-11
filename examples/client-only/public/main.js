@@ -29,7 +29,7 @@ const STARE_API_URL = 'http://localhost:3000';
 
   const getResults = (engine, query, pageNumber) => {
     return new Promise((resolve, reject) => {
-      axios.get(`${STARE_API_URL}/${engine}?query=${query}&pageNumber=${pageNumber}`)
+      axios.get(`${STARE_API_URL}/${engine}?query=${query}&numberOfResults=${pageNumber}`)
         .then(response => resolve(_.get(response, 'data')))
         .catch(error => reject(error));
     })
@@ -52,8 +52,12 @@ const STARE_API_URL = 'http://localhost:3000';
         currentData = data;
         let formatter = new JSONFormatter(data);
         results.appendChild(formatter.render());
-        resultsCount.innerHTML = 'Resultados ' + currentData.numberOfItems;
-        visualize();
+        if(currentData.numberOfItems > 0){
+          resultsCount.innerHTML = 'Resultados ' + currentData.numberOfItems;
+          visualize();
+        }else{
+          resultsCount.innerHTML = `Búsqueda para "${query.value}" no arrojó resultados`;
+        }
       })
       .catch(err => {
         results.innerHTML = err;
@@ -116,6 +120,11 @@ const STARE_API_URL = 'http://localhost:3000';
     }
   }
 
+  query.addEventListener("keyup",(e)=>{
+    if(e.key === 'Enter'){
+      showResults();
+    }
+  })
   searchBtn.onclick = showResults;
   visualizeBtn.onclick = visualize;
 })();
