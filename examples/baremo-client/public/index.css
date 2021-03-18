@@ -1,0 +1,91 @@
+html, body {
+  height: 100%;
+}
+div{
+  position: relative;
+}
+#canvas{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+area {
+  display: flex;
+  border-color: hotpink;
+}
+
+
+.container {
+  padding: 10px;
+  position: relative;
+}
+
+.selector-container{
+  position: relative;
+}
+.row .col {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 .75rem;
+  min-height: 1px;
+}
+.col.s6 {
+  width: 50%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+.error {
+  border-color: red;
+}
+pre {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  background-color: #f7f7f7;
+  overflow: auto;
+}
+
+.centroid{
+  fill: red;
+  width: 100px;
+  border-radius: 1%;
+}
+.stare__tooltip {
+  position: absolute;
+  padding: 4px;
+  width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.stare__modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  width: 500px;
+  background-color: grey;
+  border: 2px solid;
+  border-radius: 2px;
+  pointer-events: none;
+}
+/* // network node */
+.mainNode {
+  z-index: -1;
+}
+
+.svg-tiles {
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 400px;
+  max-height: 400px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 2px;
+}
