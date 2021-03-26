@@ -14,11 +14,12 @@
     "express": "^4.17.1",
     "json-formatter-js": "^2.3.4",
     "lodash": "^4.17.15",
+    "stare.js-client": "^1.0.0",
     "three": "^0.118.3"
   },
   "scripts": {
     "start": "parcel serve -p 3001 watch public/index.html",
-    "build": "parcel build public/index.html"
+    "build": "parcel build watch public/index.html"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"

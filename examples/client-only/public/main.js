@@ -54,7 +54,7 @@ const STARE_API_URL = 'http://localhost:3000';
         results.appendChild(formatter.render());
         if(currentData.numberOfItems > 0){
           resultsCount.innerHTML = 'Resultados ' + currentData.numberOfItems;
-          visualize();
+          // visualize();
         }else{
           resultsCount.innerHTML = `Búsqueda para "${query.value}" no arrojó resultados`;
         }
