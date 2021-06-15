@@ -8,7 +8,7 @@ import stare from '../../../';
 // import serverResponse from './responseSence.json';
 // import serverResponse from './responseBaremo.json';
 
-const STARE_API_URL = 'http://18.229.94.184:3003';
+const STARE_API_URL = 'http://localhost:3003';
 
 (function() {
   const engine = document.querySelector('#engine');
