@@ -56,7 +56,7 @@ const STARE_API_URL = 'http://localhost:3003';
         results.appendChild(formatter.render());
         if(currentData.numberOfItems > 0){
           resultsCount.innerHTML = 'Resultados ' + currentData.numberOfItems;
-          // visualize();
+          visualize();
         }else{
           resultsCount.innerHTML = `Búsqueda para "${query.value}" no arrojó resultados`;
         }
@@ -68,7 +68,7 @@ const STARE_API_URL = 'http://localhost:3003';
   };
 
   const visualize = () => {
-    resultsVisualization.innerHTML = "Cargando...";
+    // resultsVisualization.innerHTML = "Cargando...";
     if (_.isEmpty(currentData)) {
       alert('No data to visualize, you must do a query first');
       resultsVisualization.innerHTML = "";
@@ -82,39 +82,39 @@ const STARE_API_URL = 'http://localhost:3003';
 
     if (chart) {
       document.querySelector('#canvas').innerHTML = '';
-      
-      if (visualization.value === 'grid' || visualization.value === 'bodyInjuriesMap') {
-        chart('#canvas', currentData, {});
-        resultsVisualization.innerHTML = "";
-      } else if (visualization.value === 'tiles' || visualization.value === 'tiles3') {
-        currentData.documents.forEach((v, i) => {
-          let div = document.createElement('div');
-          div.setAttribute('class', 'svg-tiles');
-          let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-          svg.setAttribute('id', 'svg-'+i);
-          div.appendChild(svg);
-          canvas.appendChild(div);
-          // console.log(`chart('#svg-'${i}, ${v}, {})`);
-          chart('#svg-'+i, v, {});
-          resultsVisualization.innerHTML = "";
-        });
-      } else {
-        let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        svg.setAttribute('id', 'svg');
-        canvas.appendChild(svg);
-        chart('#svg', currentData, {});
-        resultsVisualization.innerHTML = "";
-        // chart('#svg', currentData, {
-        //   labelField: 'metrics.ranking',
-        //   valueField: 'metrics.keywords-position.documentLength',
-        //   groupField: 'metrics.language',
-        //   width: 500,
-        //   height: 400,
-        //   fillColor: 'steelblue',
-        //   margin: {top: 30, right: 0, bottom: 30, left: 40}
-        // });
+      chart('#canvas', currentData, {});
+    //   if (visualization.value === 'grid' || visualization.value === 'bodyInjuriesMap') {
+    //     chart('#canvas', currentData, {});
+    //     // resultsVisualization.innerHTML = "";
+    //   } else if (visualization.value === 'tiles' || visualization.value === 'tiles3') {
+    //     currentData.documents.forEach((v, i) => {
+    //       let div = document.createElement('div');
+    //       div.setAttribute('class', 'svg-tiles');
+    //       let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    //       svg.setAttribute('id', 'svg-'+i);
+    //       div.appendChild(svg);
+    //       canvas.appendChild(div);
+    //       // console.log(`chart('#svg-'${i}, ${v}, {})`);
+    //       chart('#svg-'+i, v, {});
+    //       resultsVisualization.innerHTML = "";
+    //     });
+    //   } else {
+    //     let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    //     svg.setAttribute('id', 'svg');
+    //     canvas.appendChild(svg);
+    //     chart('#svg', currentData, {});
+    //     resultsVisualization.innerHTML = "";
+    //     // chart('#svg', currentData, {
+    //     //   labelField: 'metrics.ranking',
+    //     //   valueField: 'metrics.keywords-position.documentLength',
+    //     //   groupField: 'metrics.language',
+    //     //   width: 500,
+    //     //   height: 400,
+    //     //   fillColor: 'steelblue',
+    //     //   margin: {top: 30, right: 0, bottom: 30, left: 40}
+    //     // });
         
-      }
+    //   }
     }else{
       alert("Unable to draw visualization");
       resultsVisualization.innerHTML = "";
