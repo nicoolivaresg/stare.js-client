@@ -1,6 +1,6 @@
 {
   "name": "@nicolas.olivares.g/stare.js-client",
-  "version": "1.0.2",
+  "version": "1.0.4-no",
   "description": "visualization package for stare.js-server",
   "keywords": [
     "client",
